@@ -1,0 +1,8 @@
+type Stock @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  url: AWSURL
+  favorite: Boolean
+  ontrack: Boolean
+}
