@@ -27,7 +27,7 @@ const Stocklist = () => {
 
     return (
         <>
-            <div className='w3-bar w3-light-blue'>
+            <div className='w3-bar w3-theme-l2'>
                 <a href="#" className="w3-bar-item w3-button" onClick={() => { getStock(); }}>all</a>
                 <a href="#" className="w3-bar-item w3-button" onClick={() => { getStock(3); }}>3</a>
                 <a href="#" className="w3-bar-item w3-button" onClick={() => { getStock(5); }}>5</a>
