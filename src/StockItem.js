@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const StockItem = ({
+    stockID,
     imageURL,
     name,
     ontrack,
@@ -17,10 +18,11 @@ const StockItem = ({
                 <img src={imageURL} alt="Alps" style={{ width: "100%" }} />
                 <div className="w3-container w3-theme-light">
                     <p>
-                        <input class="w3-check" type="checkbox" checked={ontrack} disabled />
+                        <input className="w3-check" type="checkbox" checked={ontrack} disabled />
                         <label> ontrack </label>
-                        <input class="w3-check" type="checkbox" checked={favorite} disabled />
+                        <input className="w3-check" type="checkbox" checked={favorite} disabled />
                         <label> favorite </label>
+                        <a href={"./update/" + stockID}>edit</a>
                     </p>
                 </div>
             </div>
