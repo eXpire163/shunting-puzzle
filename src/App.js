@@ -11,8 +11,7 @@ import awsExports from './aws-exports';
 
 
 import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Create from "./pages/Create"
+import Stocklist from "./Stocklist"
 import Update from "./pages/Update";
 import NoPage from "./pages/NoPage";
 
@@ -25,9 +24,10 @@ function App({ signOut, user }) {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout signOut={signOut} user={user} />}>
-            <Route index element={<Home />} />
+            <Route index element={<Stocklist />} />
+            <Route path="stock/:show" element={<Stocklist />} />
             <Route path="update/:stockID" element={<Update />} />
-            <Route path="create" element={<Update />} />
+            <Route path="newstock" element={<Update />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

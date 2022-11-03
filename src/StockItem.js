@@ -22,7 +22,7 @@ const StockItem = ({
                         <big>
                             {favorite && (<label > <AiFillStar /> </label>)}
                             {ontrack && (<label> <AiFillPlayCircle /> </label>)}
-                            <a href={"./update/" + stockID}><AiFillSetting /></a>
+                            <a href={"/update/" + stockID}><AiFillSetting /></a>
                         </big>
                     </p>
                 </div>
