@@ -1,10 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
+import Footer from "./Footer"
 
 const Layout = ({ user, signOut }) => {
-    return (
-        <>
+    return (<>
+
+        <div className='w3-theme-d1'>
             <header className='w3-bar w3-theme'>
-                <h2 className="w3-bar-item ">Shunting Puzzle generator</h2>
+                <a href="/"><h2 className="w3-bar-item ">Shunting Puzzle generator</h2></a>
                 <a href="#" onClick={signOut} className="w3-bar-item w3-button w3-right">Sign out {user.username}</a>
             </header>
             {/* < nav>
@@ -18,9 +20,14 @@ const Layout = ({ user, signOut }) => {
 
                 </ul>
             </nav */}
+            <div >
+                <Outlet />
+            </div>
 
-            <Outlet />
-        </>
+        </div>
+
+        <Footer />
+    </>
     )
 };
 

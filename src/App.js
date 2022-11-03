@@ -21,19 +21,19 @@ Amplify.configure(awsExports);
 
 function App({ signOut, user }) {
   return (
-    <div className='w3-theme-d1'>
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout signOut={signOut} user={user} />}>
             <Route index element={<Home />} />
             <Route path="update/:stockID" element={<Update />} />
-            <Route path="create" element={<Create />} />
+            <Route path="create" element={<Update />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
 
+    </>
   );
 }
 

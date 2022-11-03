@@ -2,8 +2,9 @@ import { DataStore } from '@aws-amplify/datastore';
 import { Stock } from './models';
 
 export async function createItem({ name, description, url, favorite, ontrack }) {
+  console.log("createItem", name, description, url, favorite, ontrack);
   await DataStore.save(
-    new Stock({ name, description, url, favorite, ontrack })
+    new Stock({ name: name, description: description, url: url, favorite: favorite, ontrack: ontrack })
   );
 };
 
@@ -42,7 +43,12 @@ export async function getFavorites() {
 }
 
 export async function getItem(id) {
-  return await DataStore.query(Stock, id);
+  if (id !== undefined) {
+    return await DataStore.query(Stock, id);
+  }
+  else {
+    return []
+  }
 }
 
 

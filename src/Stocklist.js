@@ -23,6 +23,7 @@ const Stocklist = () => {
                 <a href="#" className="w3-bar-item w3-button" onClick={async () => { setMyStock(await getItems()); }}>all</a>
                 <a href="#" className="w3-bar-item w3-button" onClick={async () => { setMyStock(await getRandomItems(3)); }}>3</a>
                 <a href="#" className="w3-bar-item w3-button" onClick={async () => { setMyStock(await getRandomItems(5)); }}>5</a>
+                <a href="./create" className="w3-bar-item w3-button" >new</a>
             </div>
             <div className="w3-row-padding ">
                 {myStock.map((wagon) =>
